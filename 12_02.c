@@ -1,9 +1,17 @@
 #include <stdio.h>
-int main()
+void swap(int *a, int *b)
 {
-    printf("Before swap : \n");
-    printf("x = 4, y = 5\n\n");
-    printf("After swap : \n");
-    printf("x = 5 ; y = 4");
-    return 0;
+    int t;
+    t = *a;
+    *a = *b;
+    *b = t;
+}
+void main()
+{
+    int a = 10, b = 5;
+    printf("Before swap: \n");
+    printf("a = %d, b = %d\n\n", a, b);
+    swap(&a, &b);
+    printf("After swap: \n");
+    printf("a = %d, b = %d\n\n", a, b);
 }
